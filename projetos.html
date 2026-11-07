@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090D16" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="Projetos de Cleber Lisboa em Design Educacional, experiências de aprendizagem, curadoria e IA aplicada à Educação." />
+  <meta property="og:title" content="Projetos — Cleber Lisboa" />
+  <meta property="og:description" content="Projetos de Cleber Lisboa em Design Educacional, experiências de aprendizagem, curadoria e IA aplicada à Educação." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Cleber Lisboa — Portfólio" />
+  <meta name="twitter:card" content="summary" />
+  <title>Projetos — Cleber Lisboa</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&family=Sora:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <script type="module" src="/src/js/projects-page.js" defer></script>
+  <script type="module" src="/src/js/site.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="container nav"><a class="brand" href="index.html"><span class="brand-name">CLEBER LISBOA</span><span class="brand-role">Design Educacional<br>e IA aplicada à Educação</span></a><nav class="nav-links" aria-label="Navegação principal"><a href="index.html">Início</a><a href="galaxia.html">Galáxia</a><a href="projetos.html" aria-current="page">Projetos</a><a href="trajetoria.html">Trajetória</a><a href="sobre.html">Sobre</a><a class="nav-cta" href="contato.html">Vamos conversar →</a></nav></div></header>
+  <main class="projects-page container">
+    <header class="page-lead"><div class="eyebrow">P01 — P14</div><h1>Projetos</h1><p>Projetos em destaque, sistemas especializados e experimentos que documentam a evolução do trabalho em Design Educacional e IA aplicada à Educação.</p></header>
+    <div class="project-filters" aria-label="Filtrar projetos">
+      <button class="filter-btn is-current" data-filter="all" aria-pressed="true">Todos</button>
+      <button class="filter-btn" data-filter="ai" aria-pressed="false">Sistemas com IA</button>
+      <button class="filter-btn" data-filter="experience" aria-pressed="false">Experiências</button>
+      <button class="filter-btn" data-filter="curation" aria-pressed="false">Curadoria</button>
+      <button class="filter-btn" data-filter="interaction" aria-pressed="false">Interatividade</button>
+      <button class="filter-btn" data-filter="lab" aria-pressed="false">Laboratório</button>
+    </div>
+    <section class="project-family-links" aria-label="Famílias de projetos">
+      <a href="sistemas.html"><span>P05 — P07</span><strong>Sistemas Especializados</strong><small>Curadoria Visual · Recursos Educacionais · HTML5 →</small></a>
+      <a href="laboratorio.html"><span>P08 — P13</span><strong>Laboratório de IA</strong><small>Projetos de origem · Curadorias · Avaliação · Ferramentas →</small></a>
+    </section>
+    <section id="all-projects-grid" class="all-projects-grid" aria-live="polite"></section>
+  </main>
+  <footer class="site-footer"><div class="container">© 2026 Cleber Lisboa · Design Educacional + IA aplicada à Educação</div></footer>
+</body>
+</html>

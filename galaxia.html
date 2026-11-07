@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090D16" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="Galáxia Profissional de Cleber Lisboa — mapa interativo de projetos em Design Educacional e IA aplicada à Educação." />
+  <meta property="og:title" content="Galáxia Profissional — Cleber Lisboa" />
+  <meta property="og:description" content="Galáxia Profissional de Cleber Lisboa — mapa interativo de projetos em Design Educacional e IA aplicada à Educação." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Cleber Lisboa — Portfólio" />
+  <meta name="twitter:card" content="summary" />
+  <title>Galáxia Profissional — Cleber Lisboa</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&family=Sora:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <script type="module" src="/src/js/galaxy-page.js" defer></script>
+  <script type="module" src="/src/js/site.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Página inicial de Cleber Lisboa">
+        <span class="brand-name">CLEBER LISBOA</span>
+        <span class="brand-role">Design Educacional<br>e IA aplicada à Educação</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="index.html">Início</a><a href="galaxia.html" aria-current="page">Galáxia</a><a href="projetos.html">Projetos</a><a href="trajetoria.html">Trajetória</a><a href="sobre.html">Sobre</a><a class="nav-cta" href="contato.html">Vamos conversar →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="galaxy-page">
+    <section class="container galaxy-intro">
+      <div>
+        <div class="eyebrow">Mapa profissional</div>
+        <h1>Galáxia Profissional</h1>
+        <p>Explore como pequenos experimentos, ferramentas e experiências foram se conectando até formar sistemas educacionais mais complexos.</p>
+      </div>
+      <div class="galaxy-mode-controls" aria-label="Modo de exploração">
+        <button class="mode-btn is-current" data-mode="explore" aria-pressed="true">Explorar</button>
+        <button class="mode-btn" data-mode="trajectory" aria-pressed="false">Ver trajetória</button>
+        <a class="mode-btn" href="projetos.html">Lista de projetos</a>
+        <button class="mode-btn mobile-map-toggle" id="mobile-map-toggle" type="button" aria-pressed="false">Abrir mapa espacial</button>
+      </div>
+    </section>
+
+    <section class="container galaxy-context" aria-label="Como ler a Galáxia">
+      <div class="galaxy-context-item"><span class="context-symbol context-size"></span><div><strong>Tamanho</strong><small>complexidade e alcance</small></div></div>
+      <div class="galaxy-context-item"><span class="context-symbol context-distance"></span><div><strong>Distância</strong><small>estágio de maturidade</small></div></div>
+      <div class="galaxy-context-item"><span class="context-symbol context-color"></span><div><strong>Cor</strong><small>natureza do projeto</small></div></div>
+      <div class="galaxy-context-item"><span class="context-symbol context-line"></span><div><strong>Conexões</strong><small>evolução, integração e afinidade</small></div></div>
+    </section>
+
+    <section class="container galaxy-workspace" aria-label="Mapa interativo dos projetos">
+      <div class="galaxy-main-column">
+        <div class="galaxy-mobile-list" id="galaxy-mobile-list" aria-label="Projetos da Galáxia em lista"></div>
+
+        <div class="galaxy-canvas-wrap" id="galaxy-canvas-wrap">
+          <div class="galaxy-map-toolbar" aria-label="Controles do mapa">
+            <button type="button" class="map-tool" id="zoom-out" aria-label="Diminuir zoom">−</button>
+            <button type="button" class="map-tool" id="zoom-reset" aria-label="Centralizar mapa">◎</button>
+            <button type="button" class="map-tool" id="zoom-in" aria-label="Aumentar zoom">+</button>
+          </div>
+          <svg id="galaxy-map-full" class="galaxy-full" role="img" aria-labelledby="galaxy-full-title galaxy-full-desc">
+            <title id="galaxy-full-title">Mapa da Galáxia Profissional de Cleber Lisboa</title>
+            <desc id="galaxy-full-desc">Treze projetos distribuídos em órbitas ao redor do núcleo de Design Educacional, com linhas de evolução, integração e competências compartilhadas.</desc>
+          </svg>
+          <div class="galaxy-legend" aria-label="Legenda das conexões">
+            <span><i class="legend-line evolution"></i>Evolução</span>
+            <span><i class="legend-line integration"></i>Integração</span>
+            <span><i class="legend-line shared"></i>Competência compartilhada</span>
+          </div>
+        </div>
+
+        <div class="galaxy-phase-key" aria-label="Regiões de maturidade">
+          <span><b>2025</b> Experimentação</span>
+          <span><b>2025–2026</b> Especialização</span>
+          <span><b>2026</b> Sistematização</span>
+          <span><b>2026</b> Arquitetura</span>
+        </div>
+      </div>
+
+      <aside id="galaxy-detail" class="galaxy-detail" tabindex="-1" aria-live="polite"></aside>
+    </section>
+
+    <section class="container trajectory-controls" aria-label="Controles da trajetória">
+      <div>
+        <div class="eyebrow">Linha evolutiva</div>
+        <p id="trajectory-status" class="muted" aria-live="polite">Modo explorar ativo.</p>
+        <div class="trajectory-progress" id="trajectory-progress" aria-label="Etapas da trajetória"></div>
+      </div>
+      <div class="trajectory-buttons">
+        <button class="btn btn-ghost" id="trajectory-prev" type="button">← Etapa anterior</button>
+        <button class="btn btn-ghost" id="trajectory-play" type="button">Reproduzir</button>
+        <button class="btn btn-ghost" id="trajectory-next" type="button">Próxima etapa →</button>
+        <button class="btn btn-secondary" id="galaxy-reset" type="button">Reiniciar mapa</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container">© 2026 Cleber Lisboa · Design Educacional + IA aplicada à Educação</div></footer>
+</body>
+</html>
